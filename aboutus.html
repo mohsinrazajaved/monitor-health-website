@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Monitor Health</title>
+  <meta name="description" content="Monitor Health is on a mission to redefine healthcare through next-generation medical technology.">
+  <link rel="icon" href="assets/MonitorHealth-fav.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* About Us Hero */
+    .mh-about-hero {
+      position: relative;
+      text-align: center;
+      padding: 160px 0 100px;
+      overflow: hidden;
+    }
+    .mh-about-hero .mh-about-hero-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      max-width: 900px;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .mh-about-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+    .mh-about-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    .mh-about-hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    /* Mission Section */
+    .mh-mission-section {
+      text-align: center;
+      padding: 80px 0;
+    }
+    .mh-mission-section .mh-mission-statement {
+      font-size: 1.25rem;
+      font-weight: 700;
+      max-width: 700px;
+      margin: 1.5rem auto 1rem;
+      line-height: 1.5;
+    }
+    .mh-mission-section .mh-mission-desc {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    /* Core Values */
+    .mh-values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .mh-value-card h4 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+    .mh-value-card p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.7;
+    }
+    .mh-value-card .mh-stat-circle {
+      margin: 0 auto 1.5rem;
+    }
+
+    /* Team Section */
+    .mh-team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      margin-top: 3rem;
+    }
+    .mh-team-member {
+      text-align: center;
+    }
+    .mh-team-member .mh-stat-circle {
+      width: 220px;
+      height: 220px;
+      margin: 0 auto 1.5rem;
+    }
+    .mh-team-member h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .mh-team-member .mh-team-role {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .mh-team-member .mh-team-bio {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.7;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    /* Teams Breakdown */
+    .mh-teams-breakdown {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .mh-teams-breakdown-item {
+      margin-bottom: 2.5rem;
+    }
+    .mh-teams-breakdown-item h4 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1aa7e5;
+      margin-bottom: 0.5rem;
+    }
+    .mh-teams-breakdown-item p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .mh-values-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .mh-team-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .mh-about-hero {
+        padding: 140px 0 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="home.html" class="logo">
+          <img src="assets/__Main Logo new cropped.svg" alt="Monitor Health" class="logo-svg">
+        </a>
+        <div class="nav-links">
+          <div class="dropdown">
+            <a href="services.html">Services <i class="fas fa-chevron-down" style="font-size:0.7em;margin-left:4px"></i></a>
+            <div class="dropdown-menu">
+              <a href="cardiac-monitoring.html">Cardiac Monitoring</a>
+              <a href="physiological-monitoring.html">Physiologic Monitoring</a>
+            </div>
+          </div>
+          <a href="technology.html">Technology</a>
+          <a href="medicine-dispensary.html">Medicine Dispensary</a>
+          <a href="manufacturing.html">Manufacturing</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="region-switcher">
+          <button class="region-switcher-btn">
+            <span class="flag-emoji">🇺🇸</span> USA <i class="fas fa-chevron-down" style="font-size:0.6em"></i>
+          </button>
+          <div class="region-switcher-menu">
+            <a href="home.html" class="region-active"><span class="flag-emoji">🇺🇸</span> United States</a>
+            <a href="pk/index.html"><span class="flag-emoji">🇵🇰</span> Pakistan</a>
+          </div>
+        </div>
+        <button class="mobile-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <div class="mobile-overlay"></div>
+
+  <!-- Section 1: Hero -->
+  <section class="mh-about-hero">
+    <img src="assets/swipe for 4k-03.png" alt="" class="mh-about-hero-bg">
+    <div class="container">
+      <h1 class="fade-in"><span class="text-blue">Redefining boundaries of </span><span class="text-green">Healthcare</span></h1>
+      <p class="fade-in">Monitor Health works towards Research and Development in the field of virtual healthcare, leading advancements in the field. We also manufacture quality products that track vital signs using next-gen sensors and technology.</p>
+    </div>
+  </section>
+
+  <!-- Section 2: Our Mission -->
+  <section class="mh-section mh-mission-section">
+    <div class="container">
+      <h2 class="mh-centered-heading fade-in"><span class="text-blue">Our </span><span class="text-green">Mission</span></h2>
+      <p class="mh-mission-statement fade-in">Monitor health is on a mission to redefine healthcare through<br><span class="text-blue">next-generation</span> <span class="text-green">medical technology.</span></p>
+      <p class="mh-mission-desc fade-in">Our team is driven by a fervor for constant innovation in personalized remote monitoring solutions that can be accessible across the globe.</p>
+    </div>
+  </section>
+
+  <!-- Section 3: Core Values -->
+  <section class="mh-section" style="padding-top:0">
+    <div class="container">
+      <h2 class="mh-centered-heading fade-in"><span class="text-blue">Core </span><span class="text-green">Values</span></h2>
+      <div class="mh-values-grid">
+        <div class="mh-value-card fade-in">
+          <div class="mh-stat-circle">
+            <img src="assets/pexels-cottonbro-7580256.png" alt="Strive for Excellence">
+          </div>
+          <h4 class="text-blue">Strive for Excellence</h4>
+          <p>At the core of everything that Monitor Health does is striving for excellence. Our team is dedicated to achieving the highest standards in healthcare innovation, ensuring every product and service we deliver meets rigorous quality benchmarks.</p>
+        </div>
+        <div class="mh-value-card fade-in">
+          <div class="mh-stat-circle">
+            <img src="assets/pexels-cottonbro-1.png" alt="Prioritize Health">
+          </div>
+          <h4 class="text-green">Priortize Health</h4>
+          <p>In a fast-paced world constantly seeking convenience, we believe health should never be compromised. Our solutions are designed to make proactive health management simple, accessible, and effective for everyone.</p>
+        </div>
+        <div class="mh-value-card fade-in">
+          <div class="mh-stat-circle">
+            <img src="assets/pexels-cedric-fauntleroy-4269205.png" alt="Be Empathetic">
+          </div>
+          <h4 class="text-blue">Be Empathetic</h4>
+          <p>Whether in our communication or our product design, empathy drives every decision. We listen to patients, caregivers, and healthcare providers to build solutions that truly address real-world needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Our Team -->
+  <section class="mh-section">
+    <div class="container">
+      <h2 class="mh-centered-heading fade-in"><span class="text-blue">Our </span><span class="text-green">Team</span></h2>
+      <div class="mh-team-grid">
+        <div class="mh-team-member fade-in-left">
+          <div class="mh-stat-circle">
+            <img src="assets/Team-1-DrHaytman.png" alt="Haytham Albizem, MD">
+          </div>
+          <h4><span class="text-blue">Haytham </span><span class="text-green">Albizem, MD</span></h4>
+          <p class="mh-team-role text-green">President and CEO of Monitor Health</p>
+          <p class="mh-team-bio">Specializes in clinical and interventional cardiology with over 15 years of experience in cardiac care and remote monitoring. Dr. Albizem leads Monitor Health's vision for next-generation healthcare technology and personalized patient solutions.</p>
+        </div>
+        <div class="mh-team-member fade-in-right">
+          <div class="mh-stat-circle">
+            <img src="assets/Team-2-Eugene.png" alt="Eugene Sumin, MBA">
+          </div>
+          <h4><span class="text-blue">Eugene </span><span class="text-green">Sumin, MBA</span></h4>
+          <p class="mh-team-role text-green">Chief Operating Officer</p>
+          <p class="mh-team-bio">MBA from Temple University Fox School of Business. Manages the internal team, serves clients, and leads the Virtual Hospital product vision. Eugene drives operational excellence across all Monitor Health divisions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Teams Breakdown -->
+  <section class="mh-section" style="padding-top:0">
+    <div class="container">
+      <div class="mh-teams-breakdown">
+        <div class="mh-teams-breakdown-item fade-in">
+          <h4>Medical Monitoring team</h4>
+          <p>Our team consists of 12 medical professionals, including highly qualified and trained MDs and nurses readily available for monitoring patients round the clock.</p>
+        </div>
+        <div class="mh-teams-breakdown-item fade-in">
+          <h4>Technology team</h4>
+          <p>11 Software, Hardware, Security, and IT Engineers that handle our products and technology services.</p>
+        </div>
+        <div class="mh-teams-breakdown-item fade-in">
+          <h4>Operations Support Team</h4>
+          <p>5 professionals in billing, logistics, and operations that keep us running every day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mh-footer">
+    <div class="container">
+      <div class="mh-footer-grid">
+        <div class="mh-footer-brand">
+          <a href="home.html">
+            <img src="assets/__Logo in White.svg" alt="Monitor Health" class="mh-footer-logo">
+          </a>
+        </div>
+        <div class="mh-footer-links-col">
+          <ul>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="cardiac-monitoring.html">Cardiac Monitoring</a></li>
+            <li><a href="physiological-monitoring.html">Physiological Monitoring</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="mh-footer-links-col">
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div class="mh-footer-contact-col">
+          <p>Monitor Health, Inc.<br>5600 Chestnut Street<br>Philadelphia, PA 19139</p>
+          <p>Phone: 215-748-5830<br>Fax: 215-747-7413</p>
+          <p>info@monitorhealth.net</p>
+        </div>
+      </div>
+      <div class="mh-footer-bottom">
+        <p>All rights reserved (c) Monitor Health</p>
+        <div class="mh-footer-social">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

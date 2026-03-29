@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Monitor Health</title>
+  <meta name="description" content="Contact Monitor Health for advanced healthcare monitoring solutions. Located in Philadelphia, PA.">
+  <link rel="icon" href="assets/MonitorHealth-fav.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="home.html" class="logo">
+          <img src="assets/__Main Logo new cropped.svg" alt="Monitor Health" class="logo-svg">
+        </a>
+        <div class="nav-links">
+          <div class="dropdown">
+            <a href="services.html">Services <i class="fas fa-chevron-down" style="font-size:0.7em;margin-left:4px"></i></a>
+            <div class="dropdown-menu">
+              <a href="cardiac-monitoring.html">Cardiac Monitoring</a>
+              <a href="physiological-monitoring.html">Physiologic Monitoring</a>
+            </div>
+          </div>
+          <a href="technology.html">Technology</a>
+          <a href="medicine-dispensary.html">Medicine Dispensary</a>
+          <a href="manufacturing.html">Manufacturing</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="region-switcher">
+          <button class="region-switcher-btn">
+            <span class="flag-emoji">🇺🇸</span> USA <i class="fas fa-chevron-down" style="font-size:0.6em"></i>
+          </button>
+          <div class="region-switcher-menu">
+            <a href="home.html" class="region-active"><span class="flag-emoji">🇺🇸</span> United States</a>
+            <a href="pk/index.html"><span class="flag-emoji">🇵🇰</span> Pakistan</a>
+          </div>
+        </div>
+        <button class="mobile-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <div class="mobile-overlay"></div>
+
+  <!-- Contact Hero -->
+  <section class="mh-page-hero">
+    <div class="container">
+      <div class="text-center">
+        <h1><span class="text-blue">Get in </span><span class="text-green">Touch</span></h1>
+        <p style="color:#555;max-width:600px;margin:1rem auto 0;font-size:1.1rem;">Get in touch with our team to learn how Monitor Health can transform your patient care.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="mh-section" style="padding-top:30px">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="fade-in-left">
+          <h2 style="margin-bottom:1.5rem"><span class="text-blue">We'd Love to </span><span class="text-green">Hear From You</span></h2>
+          <p style="color:#555;margin-bottom:2rem">Whether you're a healthcare provider looking to add remote monitoring to your practice, or a patient interested in our services, we're here to help.</p>
+
+          <div class="contact-info-item">
+            <div class="icon"><i class="fas fa-location-dot"></i></div>
+            <div>
+              <h4>Our Office</h4>
+              <p>5600 Chestnut St, Philadelphia, PA 19139</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h4>Phone</h4>
+              <p>215-748-5830</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p>info@monitorhealth.net</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Business Hours</h4>
+              <p>Monday &ndash; Friday: 9:00 AM &ndash; 6:00 PM EST<br>Monitoring Services: 24/7</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form fade-in-right">
+          <h3 style="margin-bottom:1.5rem"><span class="text-blue">Send Us a </span><span class="text-green">Message</span></h3>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required placeholder="John">
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="john@example.com">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(215) 000-0000">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a topic</option>
+                <option value="cardiac">Cardiac Monitoring</option>
+                <option value="physiological">Physiological Monitoring</option>
+                <option value="dispensary">Medicine Dispensary</option>
+                <option value="technology">Technology &amp; Products</option>
+                <option value="partnership">Partnership Inquiry</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" required placeholder="Tell us about your needs..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send Message <i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="mh-section" style="padding-top:0">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="mh-centered-heading"><span class="text-blue">Find Us in </span><span class="text-green">Philadelphia</span></h2>
+      </div>
+      <div class="map-container" style="margin-top:2rem">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.7!2d-75.2294!3d39.9566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c65a7b3e3c0f%3A0x0!2s5600+Chestnut+St%2C+Philadelphia%2C+PA+19139!5e0!3m2!1sen!2sus!4v1706000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- How can we help -->
+  <section class="mh-section mh-help-section">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="mh-centered-heading fade-in"><span class="text-blue">How can we </span><span class="text-green">help you?</span></h2>
+        <p class="mh-help-desc fade-in">Want to get Monitor Health onboard your organization? Please send us a message with your queries and our Customer Support Team will get back to you!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mh-footer">
+    <div class="container">
+      <div class="mh-footer-grid">
+        <div class="mh-footer-brand">
+          <a href="home.html">
+            <img src="assets/__Logo in White.svg" alt="Monitor Health" class="mh-footer-logo">
+          </a>
+        </div>
+        <div class="mh-footer-links-col">
+          <ul>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="cardiac-monitoring.html">Cardiac Monitoring</a></li>
+            <li><a href="physiological-monitoring.html">Physiological Monitoring</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="mh-footer-links-col">
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div class="mh-footer-contact-col">
+          <p>Monitor Health, Inc.<br>5600 Chestnut Street<br>Philadelphia, PA 19139</p>
+          <p>Phone: 215-748-5830<br>Fax: 215-747-7413</p>
+          <p>info@monitorhealth.net</p>
+        </div>
+      </div>
+      <div class="mh-footer-bottom">
+        <p>All rights reserved (c) Monitor Health</p>
+        <div class="mh-footer-social">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

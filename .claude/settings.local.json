@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"\\\\.\\(html|css|js|png|jpg|jpeg|gif|svg\\)$|assets|^d\")",
+      "Bash(find /Users/apple/Documents/monitor-health-website/assets/ -maxdepth 1 -name *.png -o -name *.jpg -o -name *.svg)",
+      "Bash(open:*)",
+      "Bash(sips:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(grep -roh 'assets/[^\"\"\"\"]*\\\\.\\\\\\(png\\\\|jpg\\\\|jpeg\\\\|svg\\\\|webp\\\\\\)' *.html pk/*.html)",
+      "Bash(grep -roh 'assets/[^\"\"\"\"]*\\\\.\\\\\\(png\\\\|jpg\\\\|jpeg\\\\|svg\\\\|webp\\\\\\)' css/*.css)",
+      "Bash(ls:*)",
+      "Bash(gh auth:*)",
+      "Bash(git remote:*)",
+      "Bash(git reset:*)",
+      "Bash(git rm:*)"
+    ]
+  }
+}
