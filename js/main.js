@@ -53,7 +53,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// ===== Scroll Animations =====
+// ===== Scroll Animations (Enhanced) =====
 const observerOptions = {
   threshold: 0.1,
   rootMargin: '0px 0px -50px 0px'
@@ -68,8 +68,71 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach(el => {
+document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .scale-in, .slide-up').forEach(el => {
   observer.observe(el);
+});
+
+// ===== Staggered Children Animation =====
+const staggerObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const children = entry.target.querySelectorAll('.stagger-child');
+      children.forEach((child, i) => {
+        child.style.transitionDelay = `${i * 0.1}s`;
+        child.classList.add('visible');
+      });
+      staggerObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.stagger-parent').forEach(el => {
+  staggerObserver.observe(el);
+});
+
+// ===== Hero Word Animation =====
+document.querySelectorAll('.animate-words').forEach(el => {
+  const words = el.textContent.trim().split(' ');
+  el.innerHTML = '';
+  words.forEach((word, i) => {
+    const span = document.createElement('span');
+    span.className = 'mh-hero-title-word';
+    span.style.animationDelay = `${0.1 + i * 0.08}s`;
+    span.textContent = word + ' ';
+    el.appendChild(span);
+  });
+});
+
+// ===== Parallax on Scroll =====
+const parallaxElements = document.querySelectorAll('.parallax-slow');
+if (parallaxElements.length) {
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    parallaxElements.forEach(el => {
+      const speed = parseFloat(el.dataset.speed) || 0.3;
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.style.transform = `translateY(${scrollY * speed * 0.1}px)`;
+      }
+    });
+  }, { passive: true });
+}
+
+// ===== Tilt effect on hover for cards =====
+document.querySelectorAll('.tilt-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = (y - centerY) / 20;
+    const rotateY = (centerX - x) / 20;
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+  });
 });
 
 // ===== Counter Animation =====

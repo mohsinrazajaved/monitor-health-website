@@ -13,7 +13,13 @@
       "Bash(gh auth:*)",
       "Bash(git remote:*)",
       "Bash(git reset:*)",
-      "Bash(git rm:*)"
+      "Bash(git rm:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(for f:*)",
+      "Bash(do sed:*)",
+      "Bash(done)",
+      "Bash(sed -i '' 's|<a href=\"\"#\"\">Privacy Policy</a>|<a href=\"\"../assets/Notice of Confidentiality and Privacy Practices.pdf\"\" target=\"\"_blank\"\">Privacy Policy</a>|g' pk/index.html)"
     ]
   }
 }
